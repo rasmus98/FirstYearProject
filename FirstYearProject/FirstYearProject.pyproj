@@ -1,0 +1,74 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>b610a746-a9c7-4bd7-8de5-6bdee336e4c6</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>Plots\DiffPlot.py</StartupFile>
+    <SearchPath>D:\Programmer\root_v5.34.36\bin;D:\Programmer\root_v5.34.36\lib</SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>FirstYearProject</Name>
+    <RootNamespace>FirstYearProject</RootNamespace>
+    <InterpreterId>Global|PythonCore|3.5</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="BetheBlock.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Plots\DiffPlot.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Plots\ParticlePairs - Kstar.py" />
+    <Compile Include="Test Scripts\module1.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Plots\ParticlePairs.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Plots\weighted ParticleStatistics.py" />
+    <Compile Include="Plots\TPC.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="read_tracks.py" />
+    <Compile Include="Plots\TOF.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Test Scripts\Terninger.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="output_full_AnalysisResults.txt" />
+    <Content Include="requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|3.5" />
+    <InterpreterReference Include="Global|PythonCore|3.6-32" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Test Scripts\" />
+    <Folder Include="Test scripts\" />
+    <Folder Include="Plots\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
